@@ -80,3 +80,61 @@
 	sum %= 10;
 	document.write("<br>");
 	document.write(sum);
+
+	document.write("<br>");
+
+	var a = 15;
+	var b = "15";
+
+	document.write(a + "a =");
+	document.write("<br>");
+	document.write(b + "b =");
+	document.write("<br>");
+
+	if (a == b) {
+		document.write("Both are equal");
+	}else {
+		document.write("Both are not equal");
+	}
+
+	if (a === b) {
+		document.write("Both are equal");
+	}else {
+		document.write("Both are not equal");
+	}
+
+	if (a != b) {
+		document.write("Both are equal");
+	}else {
+		document.write("Both are not equal");
+	}
+
+	if (a !== b) {
+		document.write("Both are equal");
+	}else {
+		document.write("Both are not equal");
+	}
+
+	if (a > b) {
+		document.write("A is greater than B");
+	}else {
+		document.write("B is greater than A");
+	}
+
+	if (a >= b) {
+		document.write("A is greater than or equal to B");
+	}else {
+		document.write("B is Greater than or equal to A");
+	}
+
+	if (a < b) {
+		document.write("A is less than B");
+	}else {
+		document.write("B is less than A");
+	}
+
+	if (a <= b) {
+		document.write("A is less than or equal to B");
+	}else {
+		document.write("B is less than or equal to A");
+	}

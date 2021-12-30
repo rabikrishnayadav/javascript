@@ -138,6 +138,16 @@
 				For example, x/=y is same as x=x/y.<br>
 				%= Subtract and assign.
 				For example, x%=y is same as x=x%y.<br>
+				</code><br>
+				Comparison Operator description<br><code>
+				== is equal to<br>
+				=== is indentical (is equal to and is of the same data type)<br>
+				!= is not equal to<br>
+				!== is not indentical<br>
+				> greater than<br>
+				>= greater than or equal to<br>
+				< less than<br>
+				<= less than or equal to<br>	
 				</code>
 			</p>
 			<script type="text/javascript">
@@ -191,6 +201,79 @@
 			document.write("<br>");
 			document.write(sum);
 			</script>
+			<h6>Comparision Operator example</h6>
+
+			<script type="text/javascript">
+				
+	document.write("<br>");
+
+	var a = 15;
+	var b = "15";
+
+	document.write("a =" + a + " " + "It's data type is " + typeof(a));
+	document.write("<br>");
+	document.write("b =" + b + " " + "It's data type is " + typeof(b));
+	document.write("<br>");
+
+	if (a == b) {
+		document.write("Both are equal");
+	}else {
+		document.write("Both are not equal");
+	}
+document.write("<br>");
+	if (a === b) {
+		document.write("Both are equal");
+	}else {
+		document.write("Both are not equal");
+	}
+document.write("<br>");
+	if (a != b) {
+		document.write("Both are equal");
+	}else {
+		document.write("Both are not equal");
+	}
+document.write("<br>");
+	if (a !== b) {
+		document.write("Both are equal");
+	}else {
+		document.write("Both are not equal");
+	}
+document.write("<br>");
+
+
+	var a = 22;
+	var b = 36;
+
+	document.write("a =" + a + " " + "It's data type is " + typeof(a));
+	document.write("<br>");
+	document.write("b =" + b + " " + "It's data type is " + typeof(b));
+	document.write("<br>");
+
+	if (a > b) {
+		document.write("A is greater than B");
+	}else {
+		document.write("B is greater than A");
+	}
+document.write("<br>");
+	if (a >= b) {
+		document.write("A is greater than or equal to B");
+	}else {
+		document.write("B is Greater than or equal to A");
+	}
+document.write("<br>");
+	if (a < b) {
+		document.write("A is less than B");
+	}else {
+		document.write("B is less than A");
+	}
+document.write("<br>");
+	if (a <= b) {
+		document.write("A is less than or equal to B");
+	}else {
+		document.write("B is less than or equal to A");
+	}
+			</script>
+
 			<h5>JavaScript Code Example</h5>
 			<iframe src="operator.js" width="500" height="300">
 			sorry your brower does not support inline frames.
@@ -202,57 +285,55 @@
 			Conditional statement are used to perfom different actions based on different conditions.
 			<ul>
 				<li>if statement</li>
-					use this statement to execute some code olny if a specified conditon is true.<br>
-					Syntax:<br>
-					if(condition)<br>
-					{<br>
-						code to be executed if condition is true<br>
-					}<br>Example:
-					<code><br>
-						var marks = 100;<br>
-						if (marks == 100) <br>
-						{<br>
-							document.write("Your mark is correct")<br>
-						}<br>
-					</code>Result:
-					<script type="text/javascript">
-						var marks = 100;
-						if (marks == 100) 
-						{
-							document.write("Your mark is correct")
-						}
-					</script>
-
+				use this statement to execute some code olny if a specified conditon is true.<br>
+				Syntax:<br>
+				if(condition)<br>
+				{<br>
+				code to be executed if condition is true<br>
+				}<br>Example:
+				<code><br>
+				var marks = 100;<br>
+				if (marks == 100) <br>
+				{<br>
+				document.write("Your mark is correct")<br>
+				}<br>
+				</code><kbd>Result:</kbd>
+				<script type="text/javascript">
+					var marks = 100;
+					if (marks == 100)
+					{
+						document.write("Your mark is correct")
+					}
+				</script>
 				<li>if...else statement</li>
 				use this statement to execute some code if the condition is true and another code if the condition is false<br>
 				Syntax:<br>
 				if(condition)<br>
 				{<br>
-					code to be executed if condition is true<br>
+				code to be executed if condition is true<br>
 				}else<br>
 				{<br>
-					Another code to be executed if condition is false<br>
+				Another code to be executed if condition is false<br>
 				}<br>
 				Example:<br>
 				<code>
-					var marks = 100;<br>
-						if (marks == 200)<br> 
-						{<br>
-							document.write("Your mark is correct")<br>
-						}else {<br>
-							document.write("You mark is not correct");<br>
-						}<br>
-				</code>Result:
+				var marks = 100;<br>
+				if (marks == 200)<br>
+				{<br>
+				document.write("Your mark is correct")<br>
+				}else {<br>
+				document.write("You mark is not correct");<br>
+				}<br>
+				</code><kbd>Result:</kbd>
 				<script type="text/javascript">
 						var marks = 100;
-						if (marks == 200) 
+						if (marks == 200)
 						{
 							document.write("Your mark is correct")
 						}else {
 							document.write("You mark is not correct");
 						}
-					</script>
-
+				</script>
 			</ul>
 		</div>
 	</body>
