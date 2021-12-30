@@ -1,5 +1,3 @@
-<script type="text/javascript">
-	
 	var a;
 	a = 10;
 	var b =5;
@@ -31,9 +29,5 @@
 	document.write("Reminder:");
 	document.write(mod);
 	document.write("<br>");
-
-</script>
-
-
 
 
