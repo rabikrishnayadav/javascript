@@ -396,5 +396,107 @@
 			</ul>
 		</div>
 		<hr>
+		<div class="container">
+			<h4>Iterative Statements(Loop)</h4>
+			Iteration, literally means repetition of a process.<br>
+			so iterative statements are constructs that help us repeat some statements a defined no of times.<br>
+			Loops can execute a block of code as long as a specified condition is true.<br>
+			The different iterative statements available in javascript are
+			<ul>
+				<li>While loop</li>
+				The while loop loops through a block of code as long as a specified condition is true.<br>
+				Syntax:<br>
+				while (condition)<br>
+				{<br>
+				code block to be execute<br>
+				}<br>
+				<h5>Code Example 1:</h5>
+				<code>
+					var i = 1;<br>
+					while(i<=20)<br>
+					{<br>
+						document.write(i);<br>
+						i++;<br>
+					}<br>
+				</code><kbd>Result:</kbd>&nbsp;&nbsp;
+				<script type="text/javascript">
+					var i = 1;
+					while (i<=20) {
+						document.write(i);
+						i++;
+						document.write("&nbsp;&nbsp;");
+					}
+				</script>
+
+				<h5>Code Example 2:</h5>
+				<code>
+					var i = 2;<br>
+					var j = 1;<br>
+					while(i<=20)<br>
+					{<br>
+						document.write("2"+"*"+j+" = " + i);<br>
+						i = i+2;<br>
+						j++;<br>
+					}<br>
+				</code>
+				<kbd>Result:</kbd><br>
+				<script type="text/javascript">
+					var i = 2;
+					var j = 1;
+					while(i<=20)
+					{
+						document.write("2"+"*"+j+" = " + i);
+						i = i+2;
+						j++;
+						document.write("<br>");
+					}
+				</script>
+				<li>Do While loop</li>
+				The do while loop is a variant of the while loop.<br>
+				This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.<br>
+				Syntax:<br>
+				do<br>{<br>
+				code block to be executed<br>}<br>while(condition);<br>
+				<h5>Example:</h5>
+				<code>
+					var i = 1;<br>
+					do<br>
+					{<br>
+						document.write(i);<br>
+						i++;<br>
+					}<br>
+					while (i<=20)<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var i = 1;
+					do
+					{
+						document.write(i);
+						document.write("&nbsp&nbsp");
+						i++;
+					}
+					while (i<=20)
+				</script>
+				<li>For loop</li>
+				For loop is used when we know how many times the loop should run.<br>If we want the loop to break based on a condition other than the number of times it runs, you should use a while loop.<br>
+				<h5>Code Example:</h5>
+				<code>
+					var a;<br>
+					for (a=1; a<20; a++) {<br>
+						document.write(a);<br>
+					}<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var a;
+					for (a=1; a<20; a++) {
+						document.write(a);
+						document.write("&nbsp&nbsp");
+					}
+				</script>
+			</ul>
+		</div><br>
+<hr>
 	</body>
 </html>
