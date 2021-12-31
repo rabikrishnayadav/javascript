@@ -147,7 +147,7 @@
 				> greater than<br>
 				>= greater than or equal to<br>
 				< less than<br>
-				<= less than or equal to<br>	
+				<= less than or equal to<br>
 				</code>
 			</p>
 			<script type="text/javascript">
@@ -202,78 +202,69 @@
 			document.write(sum);
 			</script>
 			<h6>Comparision Operator example</h6>
-
 			<script type="text/javascript">
 				
-	document.write("<br>");
-
-	var a = 15;
-	var b = "15";
-
-	document.write("a =" + a + " " + "It's data type is " + typeof(a));
-	document.write("<br>");
-	document.write("b =" + b + " " + "It's data type is " + typeof(b));
-	document.write("<br>");
-
-	if (a == b) {
-		document.write("Both are equal");
-	}else {
-		document.write("Both are not equal");
-	}
-document.write("<br>");
-	if (a === b) {
-		document.write("Both are equal");
-	}else {
-		document.write("Both are not equal");
-	}
-document.write("<br>");
-	if (a != b) {
-		document.write("Both are equal");
-	}else {
-		document.write("Both are not equal");
-	}
-document.write("<br>");
-	if (a !== b) {
-		document.write("Both are equal");
-	}else {
-		document.write("Both are not equal");
-	}
-document.write("<br>");
-
-
-	var a = 22;
-	var b = 36;
-
-	document.write("a =" + a + " " + "It's data type is " + typeof(a));
-	document.write("<br>");
-	document.write("b =" + b + " " + "It's data type is " + typeof(b));
-	document.write("<br>");
-
-	if (a > b) {
-		document.write("A is greater than B");
-	}else {
-		document.write("B is greater than A");
-	}
-document.write("<br>");
-	if (a >= b) {
-		document.write("A is greater than or equal to B");
-	}else {
-		document.write("B is Greater than or equal to A");
-	}
-document.write("<br>");
-	if (a < b) {
-		document.write("A is less than B");
-	}else {
-		document.write("B is less than A");
-	}
-document.write("<br>");
-	if (a <= b) {
-		document.write("A is less than or equal to B");
-	}else {
-		document.write("B is less than or equal to A");
-	}
+			document.write("<br>");
+			var a = 15;
+			var b = "15";
+			document.write("a =" + a + " " + "It's data type is " + typeof(a));
+			document.write("<br>");
+			document.write("b =" + b + " " + "It's data type is " + typeof(b));
+			document.write("<br>");
+			if (a == b) {
+			document.write("Both are equal");
+			}else {
+			document.write("Both are not equal");
+			}
+			document.write("<br>");
+			if (a === b) {
+			document.write("Both are equal");
+			}else {
+			document.write("Both are not equal");
+			}
+			document.write("<br>");
+			if (a != b) {
+			document.write("Both are equal");
+			}else {
+			document.write("Both are not equal");
+			}
+			document.write("<br>");
+			if (a !== b) {
+			document.write("Both are equal");
+			}else {
+			document.write("Both are not equal");
+			}
+			document.write("<br>");
+			var a = 22;
+			var b = 36;
+			document.write("a =" + a + " " + "It's data type is " + typeof(a));
+			document.write("<br>");
+			document.write("b =" + b + " " + "It's data type is " + typeof(b));
+			document.write("<br>");
+			if (a > b) {
+			document.write("A is greater than B");
+			}else {
+			document.write("B is greater than A");
+			}
+			document.write("<br>");
+			if (a >= b) {
+			document.write("A is greater than or equal to B");
+			}else {
+			document.write("B is Greater than or equal to A");
+			}
+			document.write("<br>");
+			if (a < b) {
+			document.write("A is less than B");
+			}else {
+			document.write("B is less than A");
+			}
+			document.write("<br>");
+			if (a <= b) {
+			document.write("A is less than or equal to B");
+			}else {
+			document.write("B is less than or equal to A");
+			}
 			</script>
-
 			<h5>JavaScript Code Example</h5>
 			<iframe src="operator.js" width="500" height="300">
 			sorry your brower does not support inline frames.
@@ -304,7 +295,7 @@ document.write("<br>");
 					{
 						document.write("Your mark is correct")
 					}
-				</script>
+				</script><br>
 				<li>if...else statement</li>
 				use this statement to execute some code if the condition is true and another code if the condition is false<br>
 				Syntax:<br>
@@ -333,8 +324,77 @@ document.write("<br>");
 						}else {
 							document.write("You mark is not correct");
 						}
+				</script><br>
+				<li>Switch statement</li>
+				statement is used to select one of many blocks of code to be executed.<br>
+				Syntax:<br>
+				switch(expression)<br>
+				{<br>
+				case constant : code;<br>
+				break;<br>
+				case constant : code;<br>
+				break;<br>
+				default: code;<br>
+				}<br>Example:<br>
+				<code>
+				switch (choice) {<br>
+				case "add" : var a = 8;<br>
+				var b = 2;<br>
+				var sum = a + b;<br>
+				document.write("Addition of A and B is " + sum);<br>
+				break;<br>
+				case "sub" : var a = 8;<br>
+				var b = 2;<br>
+				var sub = a - b;<br>
+				document.write("Subtraction of A and B is " + sub);<br>
+				break;<br>
+				case "mult" : var a = 8;<br>
+				var b = 2;<br>
+				var mult = a * b;<br>
+				document.write("Multiplication of A and B is " + mult);<br>
+				break;<br>
+				default: alert("not a valid input");<br>
+				break;<br>
+				}<br>
+				</code><br>
+				<kbd>Result:</kbd><br>
+				<h5>Enter your choice</h5>
+				<ol>
+					<li>Add</li>
+					<li>Sub</li>
+					<li>Mult</li>
+				</ol><br>
+				<form>
+					<input type="text" name="" id="choices" placeholder="add">&nbsp;&nbsp;&nbsp;
+					<button onclick="myfun()">Click me</button>
+				</form><br><br>
+				<script type="text/javascript">
+					function myfun()
+					{
+						var choice = document.getElementById("choices").value;
+						switch (choice) {
+							case "add" : var a = 8;
+										var b = 2;
+										var sum = a + b;
+										document.write("Addition of A and B is " + sum);
+								break;
+							case "sub" : var a = 8;
+										var b = 2;
+										var sub = a - b;
+										document.write("Subtraction of A and B is " + sub);
+								break;
+							case "mult" : var a = 8;
+										var b = 2;
+										var mult = a * b;
+										document.write("Multiplication of A and B is " + mult);
+								break;
+							default: alert("not a valid input");
+								break;
+						}
+					}
 				</script>
 			</ul>
 		</div>
+		<hr>
 	</body>
 </html>
