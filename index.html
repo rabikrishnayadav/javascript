@@ -412,12 +412,12 @@
 				}<br>
 				<h5>Code Example 1:</h5>
 				<code>
-					var i = 1;<br>
-					while(i<=20)<br>
-					{<br>
-						document.write(i);<br>
-						i++;<br>
-					}<br>
+				var i = 1;<br>
+				while(i<=20)<br>
+				{<br>
+				document.write(i);<br>
+				i++;<br>
+				}<br>
 				</code><kbd>Result:</kbd>&nbsp;&nbsp;
 				<script type="text/javascript">
 					var i = 1;
@@ -427,17 +427,16 @@
 						document.write("&nbsp;&nbsp;");
 					}
 				</script>
-
 				<h5>Code Example 2:</h5>
 				<code>
-					var i = 2;<br>
-					var j = 1;<br>
-					while(i<=20)<br>
-					{<br>
-						document.write("2"+"*"+j+" = " + i);<br>
-						i = i+2;<br>
-						j++;<br>
-					}<br>
+				var i = 2;<br>
+				var j = 1;<br>
+				while(i<=20)<br>
+				{<br>
+				document.write("2"+"*"+j+" = " + i);<br>
+				i = i+2;<br>
+				j++;<br>
+				}<br>
 				</code>
 				<kbd>Result:</kbd><br>
 				<script type="text/javascript">
@@ -459,13 +458,13 @@
 				code block to be executed<br>}<br>while(condition);<br>
 				<h5>Example:</h5>
 				<code>
-					var i = 1;<br>
-					do<br>
-					{<br>
-						document.write(i);<br>
-						i++;<br>
-					}<br>
-					while (i<=20)<br>
+				var i = 1;<br>
+				do<br>
+				{<br>
+				document.write(i);<br>
+				i++;<br>
+				}<br>
+				while (i<=20)<br>
 				</code>
 				<kbd>Result:</kbd>
 				<script type="text/javascript">
@@ -482,10 +481,10 @@
 				For loop is used when we know how many times the loop should run.<br>If we want the loop to break based on a condition other than the number of times it runs, you should use a while loop.<br>
 				<h5>Code Example:</h5>
 				<code>
-					var a;<br>
-					for (a=1; a<20; a++) {<br>
-						document.write(a);<br>
-					}<br>
+				var a;<br>
+				for (a=1; a<20; a++) {<br>
+				document.write(a);<br>
+				}<br>
 				</code>
 				<kbd>Result:</kbd>
 				<script type="text/javascript">
@@ -497,274 +496,288 @@
 				</script>
 			</ul>
 		</div><br>
-<hr>
-<div class="container">
-	<h4>Functions in JavaScript</h4>
-
-	A JavaScript function is a block of code designed to perform a particular task.<br>
-
-	A javascript function is executed when "something" invokes it(calls it).<br>
-
-	A javascript function is defined with the function keyword, followed by a name, followed by parentheses ().<br>
-
-	Function names can contain letters, degits, underscores and dollar signs (same rules as variables).<br>
-
-	The parentheses may include parameter names separated by commas:<br>(parameter1, patameter2,...)<br>
-
-	The code to be executed, by the function, is placed inside curly brackets: {}.<br>
-
-	Syntax:<br>
-
-	function_name(); <code>it is called funcion call</code><br>
-
-	function function_name(){
-		statements;
-	} <code>it is called function define</code><br>Example:<br><code>welcome();<br>function welcome(){<br>
+		<hr>
+		<div class="container">
+			<h4>Functions in JavaScript</h4>
+			A JavaScript function is a block of code designed to perform a particular task.<br>
+			A javascript function is executed when "something" invokes it(calls it).<br>
+			A javascript function is defined with the function keyword, followed by a name, followed by parentheses ().<br>
+			Function names can contain letters, degits, underscores and dollar signs (same rules as variables).<br>
+			The parentheses may include parameter names separated by commas:<br>(parameter1, patameter2,...)<br>
+			The code to be executed, by the function, is placed inside curly brackets: {}.<br>
+			Syntax:<br>
+			function_name(); <code>it is called funcion call</code><br>
+			function function_name(){
+			statements;
+			} <code>it is called function define</code><br>Example:<br><code>welcome();<br>function welcome(){<br>
 			alert("Example of function");<br>
-		}<br></code><br>
-		<kbd>Result:</kbd>
-	<script type="text/javascript">
-		welcome(); // calling the function
-
-		// function definition
-		function welcome() 
-		{
-			document.write("Example of function definition and calling"); // it's function code(statement)
-		} 
-	</script>
-<br><br>
-	Example 2: With Parameter<br>
-	<code>
-		sum(10, 20); // function calling have a, b patameters value<br>
-		sum(12, 74); // function calling have a, b patameters value<br>
-
-		// function define with parameter a, b<br>
-		function sum(a, b) {<br>
+			}<br></code><br>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				welcome(); // calling the function
+				// function definition
+				function welcome()
+				{
+					document.write("Example of function definition and calling"); // it's function code(statement)
+				}
+			</script>
+			<br><br>
+			Example 2: With Parameter<br>
+			<code>
+			sum(10, 20); // function calling have a, b patameters value<br>
+			sum(12, 74); // function calling have a, b patameters value<br>
+			// function define with parameter a, b<br>
+			function sum(a, b) {<br>
 			var add = a + b;<br>
 			document.write("The Addition of A & B is: "+add);<br>
-		}<br>
-	</code><br><kbd>Result:</kbd>
-
-	<script type="text/javascript">
-		sum(10, 20); // function calling have a, b patameters value
-		sum(12, 74); // function calling have a, b patameters value
-
-		// function define with parameter a, b
-		function sum(a, b) {
-			var add = a + b;
-			document.write("The Addition of A & B is: "+add+"<br>");
-		}
-	</script>
-	<br>
-	Example 3: With Return value<br><code>
-		var store = sum(12, 45);<br>
-		document.write("The Addition of A & B is: "+store);<br>
-		function sum(a, b)<br>
-		{<br>
+			}<br>
+			</code><br><kbd>Result:</kbd>
+			<script type="text/javascript">
+				sum(10, 20); // function calling have a, b patameters value
+				sum(12, 74); // function calling have a, b patameters value
+				// function define with parameter a, b
+				function sum(a, b) {
+					var add = a + b;
+					document.write("The Addition of A & B is: "+add+"<br>");
+				}
+			</script>
+			<br>
+			Example 3: With Return value<br><code>
+			var store = sum(12, 45);<br>
+			document.write("The Addition of A & B is: "+store);<br>
+			function sum(a, b)<br>
+			{<br>
 			var add = a + b;<br>
 			return add;<br>
-		}<br>
-	</code>
-	<kbd>Result:</kbd>
-	<script type="text/javascript">
-		var store = sum(12, 45);
-		document.write("The Addition of A & B is: "+store+"<br>");
-		function sum(a, b)
-		{
-			var add = a + b;
-			return add;
-		}
-	</script>
-</div><br><hr><br>
-<div class="container">
-	<h3>Arrays in JavaScript</h3>
-	An array is a special variable, which can hold more than one value at a time.<br>
-
-	Syntax 1 : array_name = [value1,value2,...];<br>
-	Syntax 2 : array_name = new array(va;ue1,value2,...);<br>
-	Example 1 : var friends = ['ram','laxman','bharat','satrudhan'];<br>
-	Example 2 : var friends = new array(''ram','laxman','bharat','satrudhan');
-	<br><h5>Example of code</h5>
-	<code>
-		var friends = ['ram','laxman','bharat','satrudhan'];<br>
-		document.write(friends[0]); // it will show only one value which is available in position 0<br>
-		document.write(friends[1]); // it will show only one value which is available in position 1<br>
-		document.write(friends[2]); // it will show only one value which is available in position 2<br>
-		document.write(friends[3]); // it will show only one value which is available in position 3<br>
-		document.write(friends); // it will show all array list
-	</code><br>
-	<kbd>Result: </kbd><br>
-	<script type="text/javascript">
-		var friends = ['ram','laxman','bharat','satrudhan'];
-		document.write(friends[0]); // it will show only one value which is available in position 0
-		document.write("<br>");
-		document.write(friends[1]); // it will show only one value which is available in position 1
-		document.write("<br>");
-		document.write(friends[2]); // it will show only one value which is available in position 2
-		document.write("<br>");
-		document.write(friends[3]); // it will show only one value which is available in position 3
-		document.write(friends); // it will show all array list
-		document.write("<br>");
-	</script>
-	<h5>Array Property</h5>
-	The length property sets or returns the number of element in an array<br>
-
-	<h5>Arrays Methods</h5>
-	<ol>
-		<li>length</li>
-		Example:<br><code>
-			var friends = ['ram','laxman'];<br>
-			var length = friends.length;<br>
-			document.write(length);<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['ram','laxman'];
-			var length = friends.length;
-			document.write(length);
-		</script>
-		<li>The sort( )</li>The sort( ) method sorts the items of an array.<br>The sort order can be either alphabetic or numeric, and either ascending(up) or descending(down).<br>
-		Example:<br><code>
-			var friends = ['ram','laxman'];<br>
-			sort(friends);<br>
-			document.write(friends);<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['ram','laxman'];
-			friends.sort();
-			document.write(friends);
-		</script>
-		<li>The push( )</li>The push( ) method adds new items to the end of an array.<br>
-		Example:<br><code>
-			var friends = ['ram','laxman'];<br>
-			friends.push('bharat','satrudhan','sita');<br>
-			document.write(friends);<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['ram','laxman'];
-			friends.push('bharat','satrudhan','sita');
-			document.write(friends);
-		</script>
-		<li>The pop( )</li>The pop( ) method removes the last element of an array, and returns that element.<br>
-		Example:<br><code>
+			}<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var store = sum(12, 45);
+				document.write("The Addition of A & B is: "+store+"<br>");
+				function sum(a, b)
+				{
+					var add = a + b;
+					return add;
+				}
+			</script>
+		</div><br><hr><br>
+		<div class="container">
+			<h3>Arrays in JavaScript</h3>
+			An array is a special variable, which can hold more than one value at a time.<br>
+			Syntax 1 : array_name = [value1,value2,...];<br>
+			Syntax 2 : array_name = new array(va;ue1,value2,...);<br>
+			Example 1 : var friends = ['ram','laxman','bharat','satrudhan'];<br>
+			Example 2 : var friends = new array(''ram','laxman','bharat','satrudhan');
+			<br><h5>Example of code</h5>
+			<code>
 			var friends = ['ram','laxman','bharat','satrudhan'];<br>
-			friends.pop('sita');<br>
-			document.write(friends);<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['ram','laxman','bharat','satrudhan','sita'];
-			friends.pop('sita');
-			document.write(friends);
-		</script>
-		<li>The shift( )</li>The shift( ) method removes the first item of an array.<br>
-		Example:<br><code>
-			var friends = ['ram','laxman','bharat','satrudhan'];<br>
-			friends.shift();<br>
-			document.write(friends);<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['ram','laxman','bharat','satrudhan'];
-			friends.shift();
-			document.write(friends);
-		</script>
-		<li>The unshift( )</li> The unshift( ) method adds new items to the beginnig of an array, add returns the new length.<br>
-		Example:<br><code>
-			var friends = ['laxman','bharat','satrudhan'];<br>
-			friends.unshift('ram');<br>
-			document.write(friends);<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['laxman','bharat','satrudhan'];
-			friends.unshift('ram');
-			document.write(friends);
-		</script>
-		<li>The reverse( )</li>The reverse( ) method reverses the order of the elements in an array.<br>
-		Example:<br><code>
-			var friends = ['ram',laxman','bharat','satrudhan'];<br>
-			friends.reverse();<br>
-			document.write(friends);<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['ram','laxman','bharat','satrudhan'];
-			friends.reverse();
-			document.write(friends);
-		</script>
-		<li>The isArray( )</li>The isArray( ) method determines whether an object iss an array.<br>
-		Example 1 :<br><code>
-			var friends = ['ram',laxman','bharat','satrudhan'];<br>
-			var check = Array.isArray(friends);<br>
-			document.write(check);<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['ram','laxman','bharat','satrudhan'];
-			var check = Array.isArray(friends);
-			document.write(check);
-		</script><br>
-		Example 2 :<br><code>
-			var friends = 4;<br>
-			var check = Array.isArray(friends);<br>
-			document.write(check);<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = 4;
-			var check = Array.isArray(friends);
-			document.write(check);
-		</script>
-		<li>The concat( )</li>The concat() method is used to join two or more arrays.<br>
-		Example:<br><code>
-			var friends = ['ram',laxman','bharat','satrudhan'];<br>
-			var girls = ['sita','gita','urmila'];<br>
-			document.write(friends.concat(girls));<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['ram','laxman','bharat','satrudhan'];
-			var girls = ['sita','gita','urmila'];
-			document.write(friends.concat(girls));
-		</script>
-		<li>The indexOf( )</li>The indexOf() method searches the array for the spedified item, and returns its position.<br>
-		Example:<br><code>
-			var friends = ['ram',laxman','bharat','satrudhan'];<br>
-			document.write(friends.indexOf('ram'));<br>
-			document.write(friends.indexOf('laxman'));<br>
-			document.write(friends.indexOf('bharat'));<br>
-			document.write(friends.indexOf('satrudhan'));<br>
-		</code>
-		<kbd>Result:</kbd>
-		<script type="text/javascript">
-			var friends = ['ram','laxman','bharat','satrudhan'];
-			document.write(friends.indexOf("ram") + "&nbsp");
-			document.write(friends.indexOf("laxman") + "&nbsp");
-			document.write(friends.indexOf("bharat") + "&nbsp");
-			document.write(friends.indexOf("satrudhan") + "&nbsp");
-		</script>
-	</ol>
-</div><br><hr><br>
-<div class="container">
-	<h3>Prompt Box</h3>
-	javascript dialog boxes alert, prompt, confirmation.prompt box.<br>A prompt box is often used if you want the user to input a value before entering a page.<br>When a prompt box pops up, the user will have to click either :OK or "cancel" to proceed.<br>
-	Example:<br>
-	<code>
-				var name = prompt("What is your name?");<br>
-		if (name!=null) {<br>
+			document.write(friends[0]); // it will show only one value which is available in position 0<br>
+			document.write(friends[1]); // it will show only one value which is available in position 1<br>
+			document.write(friends[2]); // it will show only one value which is available in position 2<br>
+			document.write(friends[3]); // it will show only one value which is available in position 3<br>
+			document.write(friends); // it will show all array list
+			</code><br>
+			<kbd>Result: </kbd><br>
+			<script type="text/javascript">
+				var friends = ['ram','laxman','bharat','satrudhan'];
+				document.write(friends[0]); // it will show only one value which is available in position 0
+				document.write("<br>");
+				document.write(friends[1]); // it will show only one value which is available in position 1
+				document.write("<br>");
+				document.write(friends[2]); // it will show only one value which is available in position 2
+				document.write("<br>");
+				document.write(friends[3]); // it will show only one value which is available in position 3
+				document.write(friends); // it will show all array list
+				document.write("<br>");
+			</script>
+			<h5>Array Property</h5>
+			The length property sets or returns the number of element in an array<br>
+			<h5>Arrays Methods</h5>
+			<ol>
+				<li>length</li>
+				Example:<br><code>
+				var friends = ['ram','laxman'];<br>
+				var length = friends.length;<br>
+				document.write(length);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['ram','laxman'];
+					var length = friends.length;
+					document.write(length);
+				</script>
+				<li>The sort( )</li>The sort( ) method sorts the items of an array.<br>The sort order can be either alphabetic or numeric, and either ascending(up) or descending(down).<br>
+				Example:<br><code>
+				var friends = ['ram','laxman'];<br>
+				sort(friends);<br>
+				document.write(friends);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['ram','laxman'];
+					friends.sort();
+					document.write(friends);
+				</script>
+				<li>The push( )</li>The push( ) method adds new items to the end of an array.<br>
+				Example:<br><code>
+				var friends = ['ram','laxman'];<br>
+				friends.push('bharat','satrudhan','sita');<br>
+				document.write(friends);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['ram','laxman'];
+					friends.push('bharat','satrudhan','sita');
+					document.write(friends);
+				</script>
+				<li>The pop( )</li>The pop( ) method removes the last element of an array, and returns that element.<br>
+				Example:<br><code>
+				var friends = ['ram','laxman','bharat','satrudhan'];<br>
+				friends.pop('sita');<br>
+				document.write(friends);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['ram','laxman','bharat','satrudhan','sita'];
+					friends.pop('sita');
+					document.write(friends);
+				</script>
+				<li>The shift( )</li>The shift( ) method removes the first item of an array.<br>
+				Example:<br><code>
+				var friends = ['ram','laxman','bharat','satrudhan'];<br>
+				friends.shift();<br>
+				document.write(friends);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['ram','laxman','bharat','satrudhan'];
+					friends.shift();
+					document.write(friends);
+				</script>
+				<li>The unshift( )</li> The unshift( ) method adds new items to the beginnig of an array, add returns the new length.<br>
+				Example:<br><code>
+				var friends = ['laxman','bharat','satrudhan'];<br>
+				friends.unshift('ram');<br>
+				document.write(friends);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['laxman','bharat','satrudhan'];
+					friends.unshift('ram');
+					document.write(friends);
+				</script>
+				<li>The reverse( )</li>The reverse( ) method reverses the order of the elements in an array.<br>
+				Example:<br><code>
+				var friends = ['ram',laxman','bharat','satrudhan'];<br>
+				friends.reverse();<br>
+				document.write(friends);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['ram','laxman','bharat','satrudhan'];
+					friends.reverse();
+					document.write(friends);
+				</script>
+				<li>The isArray( )</li>The isArray( ) method determines whether an object iss an array.<br>
+				Example 1 :<br><code>
+				var friends = ['ram',laxman','bharat','satrudhan'];<br>
+				var check = Array.isArray(friends);<br>
+				document.write(check);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['ram','laxman','bharat','satrudhan'];
+					var check = Array.isArray(friends);
+					document.write(check);
+				</script><br>
+				Example 2 :<br><code>
+				var friends = 4;<br>
+				var check = Array.isArray(friends);<br>
+				document.write(check);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = 4;
+					var check = Array.isArray(friends);
+					document.write(check);
+				</script>
+				<li>The concat( )</li>The concat() method is used to join two or more arrays.<br>
+				Example:<br><code>
+				var friends = ['ram',laxman','bharat','satrudhan'];<br>
+				var girls = ['sita','gita','urmila'];<br>
+				document.write(friends.concat(girls));<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['ram','laxman','bharat','satrudhan'];
+					var girls = ['sita','gita','urmila'];
+					document.write(friends.concat(girls));
+				</script>
+				<li>The indexOf( )</li>The indexOf() method searches the array for the spedified item, and returns its position.<br>
+				Example:<br><code>
+				var friends = ['ram',laxman','bharat','satrudhan'];<br>
+				document.write(friends.indexOf('ram'));<br>
+				document.write(friends.indexOf('laxman'));<br>
+				document.write(friends.indexOf('bharat'));<br>
+				document.write(friends.indexOf('satrudhan'));<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					var friends = ['ram','laxman','bharat','satrudhan'];
+					document.write(friends.indexOf("ram") + "&nbsp");
+					document.write(friends.indexOf("laxman") + "&nbsp");
+					document.write(friends.indexOf("bharat") + "&nbsp");
+					document.write(friends.indexOf("satrudhan") + "&nbsp");
+				</script>
+			</ol>
+		</div><br><hr><br>
+		<div class="container">
+			<h3>Prompt Box</h3>
+			javascript dialog boxes alert, prompt, confirmation.prompt box.<br>A prompt box is often used if you want the user to input a value before entering a page.<br>When a prompt box pops up, the user will have to click either :OK or "cancel" to proceed.<br>
+			Example:<br>
+			<code>
+			var name = prompt("What is your name?");<br>
+			if (name!=null) {<br>
 			document.write("Nice to meet you" +name+".");<br>
-		}<br>
-	</code>
-	<script type="text/javascript">
-		// var name = prompt("What is your name?");
-		// if (name!=null) {
-		// 	document.write("Nice to meet you" +name+".");
-		// }
-	</script>
-</div><br><hr><br>
-
+			}<br>
+			</code>
+			<script type="text/javascript">
+				// var name = prompt("What is your name?");
+				// if (name!=null) {
+					// 	document.write("Nice to meet you" +name+".");
+				// }
+			</script>
+		</div><br><hr><br>
+		<div class="container">
+			<h3>Confirm Box</h3>
+			A confirmation dialog box is mostly used to take user's permission on any option.<br>It displays a dialog box with two buttons: "OK" or "Cancel"<br>If the user click on the "OK" button, the window method confirm() will return true.<br> If the user click on "Cancel" button, the confirm() return false.<br>
+			Example:<br>
+			<code>
+			myfun(){<br>
+			var user_confirm = confirm("Do you want to visit on my official website");<br>
+			if (user_confirm == true) {<br>
+			window.open("https://rabikrishnayadav.com.np");<br>
+			return true;<br>
+			}else {<br>
+			document.write("you do not want to visit on my website");<br>
+			return false;<br>
+			}<br>
+			}<br>
+			</code>
+			<script type="text/javascript">
+				function myfun(){
+					var user_confirm = confirm("Do you want to visit on my official website");
+					if (user_confirm == true) {
+						window.open("https://rabikrishnayadav.com.np");
+						return true;
+					}else {
+						document.write("you do not want to visit on my website");
+						return false;
+					}
+				}
+			</script>
+			<input type="button" name="" onclick="myfun()" value="click here">
+		</div><br><hr><br>
 	</body>
 </html>
