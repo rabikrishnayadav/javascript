@@ -779,5 +779,125 @@
 			</script>
 			<input type="button" name="" onclick="myfun()" value="click here">
 		</div><br><hr><br>
+		<div class="container">
+			<h3>String Object</h3>
+			A javascript string is zero or more characters written inside quotes'<br>
+			Normally, javascript strings are primitive values, created frim literals:<br>var name ="rabi";<br>
+			But strings can also be defined as objects with the keyword "new".<br>
+			var name = new String("rabi");<br>
+			Example:<br><code>
+				var name1 = "rabi"; // it's string define<br>
+				var name2 = new String("rabi"); // it's string but define as object<br>
+				document.write(name1 == name2); // it will show true in result because it's compare only value<br>
+				document.write(name1 === name2); // it will show false in result because it's compare value with data type<br>
+				document.write(typeof(name1)); //  it will show the data type<br> 
+				document.write(typeof(name2)); / it will show data type<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var name1 = "rabi";
+				var name2 = new String("rabi");
+				document.write(name1 == name2);
+				document.write("<br>");
+				document.write(name1 === name2);
+				document.write("<br>");
+				document.write(typeof(name1));
+				document.write("<br>");
+				document.write(typeof(name2));
+			</script>
+			<h4>String Methods and Properties</h4>
+			javascript , methods and properties are also available to primitive values,<br>because javascript treats primitive vales as objects when executing methods and properties.<br>
+			<ol>
+				<li>The length</li>The length property returns the length of a string<br>Example:<br><code>
+					var name = "rabi krishna yadav";<br>
+					document.write(name.length);<br>
+				</code><kbd>Result:</kbd>
+				<script type="text/javascript">
+					var name = "rabi krishna yadav";
+					document.write(name.length);
+				</script>
+				<li>The charAt()</li>This method returns the character at aspecified index (position) in a string<br>
+				Example:<br><code>
+					var name = "rabi krishna yadav";<br>
+					document.write(name.charAt(5));<br>
+					document.write(name.charAt(6));<br>
+					document.write(name.charAt(7));<br>
+					document.write(name.charAt(8));<br>
+					document.write(name.charAt(9));<br>
+					
+				</code><kbd>Result:</kbd>
+				<script type="text/javascript">
+					var name = "rabi krishna yadav";
+					document.write(name.charAt(5));
+					document.write("&nbsp;&nbsp;");
+					document.write(name.charAt(6));
+					document.write("&nbsp;&nbsp;");
+					document.write(name.charAt(7));
+					document.write("&nbsp;&nbsp;");
+					document.write(name.charAt(8));
+					document.write("&nbsp;&nbsp;");
+					document.write(name.charAt(9));
+				</script>
+				<li>The indexOf()</li>This method returns the index of (the position of) the first occurrence of a specified text in a string. it will also return -1 if the text is not found.<br>
+				Example:<br><code>
+					var name = "rabi krishna yadav";<br>
+					document.write(name.indexOf("k"));<br>
+					document.write(name,indexOf("yadav"));<br>
+				</code><kbd>Result:</kbd>
+				<script type="text/javascript">
+					var name = "rabi krishna yadav";
+					document.write(name.indexOf("k"));
+					document.write("&nbsp;&nbsp");
+					document.write(name.indexOf("yadav"));
+				</script>
+				<li>The lastIndexOf()</li>This method returns the inde of the last occurrence of a specified text in a string. it will also return -1 if the text is not found.<br>
+				Example:<br><code>
+					var name = "rabi krishna yadav";<br>
+					document.write(name.lastIndexOf("a"));<br>
+				</code><kbd>Result:</kbd>
+				<script type="text/javascript">
+					var name = "rabi krishna yadav";
+					document.write(name.lastIndexOf("a"));
+				</script>
+				<li>The replace()</li>This method replaces a specified value with another value in a string<br>
+				Example:<br><code>
+					var name = "rabi kumar yadav";<br>
+					document.replace("kumar","krishna");<br>
+				</code><kbd>Result:</kbd>
+				<script type="text/javascript">
+					var name = "rabi kumar yadav";
+					document.write(name.replace("kumar","krishna"));
+				</script>
+				<li>toUpperCase()</li> This method will convert a string to upper case.<br>
+				Example:<br><code>
+					var name = "rabi krishna yadav";<br>
+					document.write(name.toUpperCase());<br>
+				</code><kbd>Result:</kbd>
+				<script type="text/javascript">
+					var name = "rabi krishna yadav";
+					document.write(name.toUpperCase());
+				</script>
+				<li>toLowerCase()</li>This method will convert a string to lower case.<br>
+				Example:<br><code>
+					var name = "RABI KRISHNA YADAV";<br>
+					document.write(name.toLowerCase());<br>
+				</code><kbd>Result:</kbd>
+				<script type="text/javascript">
+					var name = "RABI KRISHNA YADAV";
+					document.write(name.toLowerCase());
+				</script>
+				<li>concat()</li>This method join two or more strings.<br>
+				Example:<br><code>
+					var fname = "rabi krishna";<br>
+					var lname = "yadav";<br>
+					document.write(fname.concat(lname));<br>
+				</code><kbd>Result:</kbd>
+				<script type="text/javascript">
+					var fame = "rabi krishna";
+					var lname ="yadav";
+					document.write(fname.concat(lname));
+				</script>
+			</ol>
+		</div><br><hr><br>
 	</body>
 </html>
