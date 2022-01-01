@@ -1,0 +1,94 @@
+<<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>window</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	</head>
+	<body>
+		<h2 align="center">Window, Location and Print Object</h2>
+		<hr>
+		<div id="first" class="container"><h3>Location Object</h3>
+			The location object contains information about the current URL.<br>The location object is part of the window object and is accessed through the 'window.location' property.<br>
+			<ul>
+				<li>Window Location Href</li>The window.location.href property returns the URL of the current page.<br>
+				Syntax: window.location.href;<br>
+				Code Example:<br>
+				<code>
+				document.write(window.location.href);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					document.write(window.location.href);
+				</script>
+				<li>Window Location Hostname</li>The window.location.hostname property returns the name of the internet host (of the current page).<br>
+				Code Example:<br>
+				<code>
+				document.write(window.location.hostname);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					document.write(window.location.hostname);
+				</script>
+				<li>Window Location Pathname</li>The window.location.pathname property returns the pathname of the current page.<br>
+				Code Example:<br>
+				<code>
+				document.write(window.location.pathname);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					document.write(window.location.pathname);
+				</script>
+				<li>Window Location Protocol</li>The window.location.protocol property returns the web protocol of the page.<br>
+				Code Example:<br>
+				<code>
+				document.write(window.location.protocol);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<script type="text/javascript">
+					document.write(window.location.protocol);
+				</script>
+				<li>Window Location Assign</li>The window.location.assign() method loads a new document.
+				Code Example:<br>
+				<code>
+				function myassign(){<br>
+				window.location.assign("https://rabikrishnayadav.com.np");<br>
+				}<br>
+				</code>
+				<kbd>Result:</kbd>&nbsp;&nbsp;&nbsp;<button onclick="myassign()">Click here</button>
+				<script type="text/javascript">
+					function myassign(){
+				window.location.assign("https://rabikrishnayadav.com.np");
+				}
+				</script>
+			</ul>
+		</div><br><hr>
+		<div id="second" class="container">
+			<h3>Print Object</h3>
+			<div id="divone">Div One Content is here.
+				<button onclick="divprint('divone')">Print 1'st div</button>
+			</div><br>
+			<div id="divtwo">Div two Content is here.
+				<button onclick="divprint('divtwo')">Print 2'nd div</button>
+			</div><br>
+			For Print only Location Object contents <button onclick="divprint('first')">Click Here</button> <br><br>
+			For print only Print Object Content <button onclick="divprint('second')">Click here</button><br>
+			<button onclick="printfullpage()">Print full page</button>
+			<script type="text/javascript">
+				// code for full page
+				function printfullpage(){
+					window.print();
+				}
+				// code for div wise
+				function divprint(paravalue){
+					var backup = document.body.innerHTML;
+					var div_content = document.getElementById(paravalue).innerHTML;
+					document.body.innerHTML = div_content;
+					window.print();
+					document.body.innerHTML = backup;
+				}
+			</script>
+		</div>
+	</body>
+</html>
