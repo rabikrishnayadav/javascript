@@ -1,12 +1,127 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>DOM</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.css">
-</head>
-<body>
-	
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>DOM</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1 align="center">DOM :-
+			<span id="d">D : Document,</span>
+			<span id="o">O : Object,</span>
+			<span id="m">M : Model</span>
+			</h1>
+		</div><hr>
+		<div class="container">
+			
+			<h4>
+			When a web page is loaded, the browser creates a Document Object Model of the page. According to W3C everything is a Node.
+			</h4>
+			<p>
+				documents are modeled using objects, Element and attributes in our page is an Object.
+			</p>
+			<p>
+				A start tag consists of an opening angle bracket(<) followed by the element name, zero or more space separated attribute/value pairs, and a closing angle bracket(>).
+			</p>
+			<p>
+				An element in HTML represents some kind of structure or semantics and generally consists of a start tag, content, and an end tag.
+			</p>
+			<p>
+				An attribute defines a property for an element, consists of an attribute/value pair, and appears within the element's start tag.
+			</p>
+		</div><br><hr>
+		<div class="container">
+			<h3>Access DOM element</h3>
+			<ul>
+				<li class="font-weight-bolder">Access By Id</li>
+				<p id="name">Rabi kr Yadav</p>
+				Code Example:<br>
+				<code>
+				var a = document.getElementById("name").innerHTML;<br>
+				var a = document.getElementById("name").innerText;<br>
+				document.write(a);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<!-- how to access elements by ID -->
+				<script type="text/javascript">
+					var a = document.getElementById("name").innerHTML;
+					document.write(a +"<br>");
+					var a = document.getElementById("name").innerText;
+					document.write(a);
+				</script>
+				<li class="font-weight-bolder">Access By Class</li>
+				<p class="sylbs">Learning javascript</p>
+				<p class="sylbs">Create awesome webstie</p>
+				Code Example:<br>
+				<code>
+				var a = document.getElementsByClassName("sylbs")[0].innerHTML;<br>
+				document.write(a);<br>
+				var a = document.getElementsByClassName("sylbs")[1].innerHTML;<br>
+				document.write(a);<br>
+				</code>
+				<kbd>Result:</kbd>
+				<!-- how to access element by class -->
+				<script type="text/javascript">
+					var a = document.getElementsByClassName("sylbs")[0].innerHTML;
+					document.write(a);
+				</script>
+				<br>
+				<!-- acces element by by second class -->
+				<script type="text/javascript">
+					var a = document.getElementsByClassName("sylbs")[1].innerHTML;
+					document.write(a);
+				</script>
+				<li class="font-weight-bolder">Access By Tag</li> it's result will show in console<br>
+				Code Example:<br>
+				<code>
+				<!-- how to access element by tag  -->
+				var a =document.getElementsByTagName("p");<br>
+				console.log(a);<br>
+				</code>
+				<script type="text/javascript">
+					var a =document.getElementsByTagName("p");
+					console.log(a);
+				</script>
+				<li class="font-weight-bolder">Access First Elements</li>
+				<h6>First time h6 tag use</h6>
+				<h6>Second time h6 tag use</h6>
+				Code Example:<br>
+				<code>
+				var a = document.querySelector("h6").innerHTML;<br>
+				document.write(a);<br>
+				</code><br>
+				<kbd>Result:</kbd>
+				<!-- how to access first element -->
+				<script type="text/javascript">
+					var a = document.querySelector("h6").innerHTML;
+					document.write(a);
+				</script>
+			</ul>
+		</div><br><hr>
+		<div class="container">
+			<h3>DOM CSS</h3>
+			<ul>
+				<li class="font-weight-bolder">One By One</li>
+				<h5 id="one">It's color green using js</h5>
+				Code Example:<br>
+				<code>
+					document.getElementById('one').style.color="green";<br>
+				</code>
+				<script type="text/javascript">
+					document.getElementById('one').style.color="green";
+				</script>
+				<li class="font-weight-bolder">All At Once</li>
+				<h5 id="second">It's background color and color changed using js</h5>
+				Code Example:<br>
+				<code>
+					document.getElementById('second').setAttribute("style", "color: red; background-color:black; height:50px;");<br>
+				</code>
+				<script type="text/javascript">
+					document.getElementById('second').setAttribute("style", "color: red; background-color:black; text-align:center; height:30px;");
+				</script>
+			</ul>
+		</div>		
+	</body>
 </html>
