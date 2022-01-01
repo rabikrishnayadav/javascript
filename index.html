@@ -498,5 +498,90 @@
 			</ul>
 		</div><br>
 <hr>
+<div class="container">
+	<h4>Functions in JavaScript</h4>
+
+	A JavaScript function is a block of code designed to perform a particular task.<br>
+
+	A javascript function is executed when "something" invokes it(calls it).<br>
+
+	A javascript function is defined with the function keyword, followed by a name, followed by parentheses ().<br>
+
+	Function names can contain letters, degits, underscores and dollar signs (same rules as variables).<br>
+
+	The parentheses may include parameter names separated by commas:<br>(parameter1, patameter2,...)<br>
+
+	The code to be executed, by the function, is placed inside curly brackets: {}.<br>
+
+	Syntax:<br>
+
+	function_name(); <code>it is called funcion call</code><br>
+
+	function function_name(){
+		statements;
+	} <code>it is called function define</code><br>Example:<br><code>welcome();<br>function welcome(){<br>
+			alert("Example of function");<br>
+		}<br></code><br>
+		<kbd>Result:</kbd>
+	<script type="text/javascript">
+		welcome(); // calling the function
+
+		// function definition
+		function welcome() 
+		{
+			document.write("Example of function definition and calling"); // it's function code(statement)
+		} 
+	</script>
+<br><br>
+	Example 2: With Parameter<br>
+	<code>
+		sum(10, 20); // function calling have a, b patameters value<br>
+		sum(12, 74); // function calling have a, b patameters value<br>
+
+		// function define with parameter a, b<br>
+		function sum(a, b) {<br>
+			var add = a + b;<br>
+			document.write("The Addition of A & B is: "+add);<br>
+		}<br>
+	</code><br><kbd>Result:</kbd>
+
+	<script type="text/javascript">
+		sum(10, 20); // function calling have a, b patameters value
+		sum(12, 74); // function calling have a, b patameters value
+
+		// function define with parameter a, b
+		function sum(a, b) {
+			var add = a + b;
+			document.write("The Addition of A & B is: "+add+"<br>");
+		}
+	</script>
+	<br>
+	Example 3: With Return value<br><code>
+		var store = sum(12, 45);<br>
+		document.write("The Addition of A & B is: "+store);<br>
+		function sum(a, b)<br>
+		{<br>
+			var add = a + b;<br>
+			return add;<br>
+		}<br>
+	</code>
+	<kbd>Result:</kbd>
+	<script type="text/javascript">
+		var store = sum(12, 45);
+		document.write("The Addition of A & B is: "+store+"<br>");
+		function sum(a, b)
+		{
+			var add = a + b;
+			return add;
+		}
+	</script>
+</div><br><hr><br>
+
+
+
+
+
+
+
 	</body>
 </html>
