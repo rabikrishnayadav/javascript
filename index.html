@@ -576,11 +576,178 @@
 		}
 	</script>
 </div><br><hr><br>
+<div class="container">
+	<h3>Arrays in JavaScript</h3>
+	An array is a special variable, which can hold more than one value at a time.<br>
 
+	Syntax 1 : array_name = [value1,value2,...];<br>
+	Syntax 2 : array_name = new array(va;ue1,value2,...);<br>
+	Example 1 : var friends = ['ram','laxman','bharat','satrudhan'];<br>
+	Example 2 : var friends = new array(''ram','laxman','bharat','satrudhan');
+	<br><h5>Example of code</h5>
+	<code>
+		var friends = ['ram','laxman','bharat','satrudhan'];<br>
+		document.write(friends[0]); // it will show only one value which is available in position 0<br>
+		document.write(friends[1]); // it will show only one value which is available in position 1<br>
+		document.write(friends[2]); // it will show only one value which is available in position 2<br>
+		document.write(friends[3]); // it will show only one value which is available in position 3<br>
+		document.write(friends); // it will show all array list
+	</code><br>
+	<kbd>Result: </kbd><br>
+	<script type="text/javascript">
+		var friends = ['ram','laxman','bharat','satrudhan'];
+		document.write(friends[0]); // it will show only one value which is available in position 0
+		document.write("<br>");
+		document.write(friends[1]); // it will show only one value which is available in position 1
+		document.write("<br>");
+		document.write(friends[2]); // it will show only one value which is available in position 2
+		document.write("<br>");
+		document.write(friends[3]); // it will show only one value which is available in position 3
+		document.write(friends); // it will show all array list
+		document.write("<br>");
+	</script>
+	<h5>Array Property</h5>
+	The length property sets or returns the number of element in an array<br>
 
-
-
-
+	<h5>Arrays Methods</h5>
+	<ol>
+		<li>length</li>
+		Example:<br><code>
+			var friends = ['ram','laxman'];<br>
+			var length = friends.length;<br>
+			document.write(length);<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['ram','laxman'];
+			var length = friends.length;
+			document.write(length);
+		</script>
+		<li>The sort( )</li>The sort( ) method sorts the items of an array.<br>The sort order can be either alphabetic or numeric, and either ascending(up) or descending(down).<br>
+		Example:<br><code>
+			var friends = ['ram','laxman'];<br>
+			sort(friends);<br>
+			document.write(friends);<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['ram','laxman'];
+			friends.sort();
+			document.write(friends);
+		</script>
+		<li>The push( )</li>The push( ) method adds new items to the end of an array.<br>
+		Example:<br><code>
+			var friends = ['ram','laxman'];<br>
+			friends.push('bharat','satrudhan','sita');<br>
+			document.write(friends);<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['ram','laxman'];
+			friends.push('bharat','satrudhan','sita');
+			document.write(friends);
+		</script>
+		<li>The pop( )</li>The pop( ) method removes the last element of an array, and returns that element.<br>
+		Example:<br><code>
+			var friends = ['ram','laxman','bharat','satrudhan'];<br>
+			friends.pop('sita');<br>
+			document.write(friends);<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['ram','laxman','bharat','satrudhan','sita'];
+			friends.pop('sita');
+			document.write(friends);
+		</script>
+		<li>The shift( )</li>The shift( ) method removes the first item of an array.<br>
+		Example:<br><code>
+			var friends = ['ram','laxman','bharat','satrudhan'];<br>
+			friends.shift();<br>
+			document.write(friends);<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['ram','laxman','bharat','satrudhan'];
+			friends.shift();
+			document.write(friends);
+		</script>
+		<li>The unshift( )</li> The unshift( ) method adds new items to the beginnig of an array, add returns the new length.<br>
+		Example:<br><code>
+			var friends = ['laxman','bharat','satrudhan'];<br>
+			friends.unshift('ram');<br>
+			document.write(friends);<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['laxman','bharat','satrudhan'];
+			friends.unshift('ram');
+			document.write(friends);
+		</script>
+		<li>The reverse( )</li>The reverse( ) method reverses the order of the elements in an array.<br>
+		Example:<br><code>
+			var friends = ['ram',laxman','bharat','satrudhan'];<br>
+			friends.reverse();<br>
+			document.write(friends);<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['ram','laxman','bharat','satrudhan'];
+			friends.reverse();
+			document.write(friends);
+		</script>
+		<li>The isArray( )</li>The isArray( ) method determines whether an object iss an array.<br>
+		Example 1 :<br><code>
+			var friends = ['ram',laxman','bharat','satrudhan'];<br>
+			var check = Array.isArray(friends);<br>
+			document.write(check);<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['ram','laxman','bharat','satrudhan'];
+			var check = Array.isArray(friends);
+			document.write(check);
+		</script><br>
+		Example 2 :<br><code>
+			var friends = 4;<br>
+			var check = Array.isArray(friends);<br>
+			document.write(check);<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = 4;
+			var check = Array.isArray(friends);
+			document.write(check);
+		</script>
+		<li>The concat( )</li>The concat() method is used to join two or more arrays.<br>
+		Example:<br><code>
+			var friends = ['ram',laxman','bharat','satrudhan'];<br>
+			var girls = ['sita','gita','urmila'];<br>
+			document.write(friends.concat(girls));<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['ram','laxman','bharat','satrudhan'];
+			var girls = ['sita','gita','urmila'];
+			document.write(friends.concat(girls));
+		</script>
+		<li>The indexOf( )</li>The indexOf() method searches the array for the spedified item, and returns its position.<br>
+		Example:<br><code>
+			var friends = ['ram',laxman','bharat','satrudhan'];<br>
+			document.write(friends.indexOf('ram'));<br>
+			document.write(friends.indexOf('laxman'));<br>
+			document.write(friends.indexOf('bharat'));<br>
+			document.write(friends.indexOf('satrudhan'));<br>
+		</code>
+		<kbd>Result:</kbd>
+		<script type="text/javascript">
+			var friends = ['ram','laxman','bharat','satrudhan'];
+			document.write(friends.indexOf("ram") + "&nbsp");
+			document.write(friends.indexOf("laxman") + "&nbsp");
+			document.write(friends.indexOf("bharat") + "&nbsp");
+			document.write(friends.indexOf("satrudhan") + "&nbsp");
+		</script>
+	</ol>
+</div><br><hr><br>
 
 
 	</body>
