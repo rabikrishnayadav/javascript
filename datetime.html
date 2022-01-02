@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Date and Time</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+		<style type="text/css">
+			.container{
+				background-color: white;
+			}
+		</style>
+	</head>
+	<body style="background-color:gray;">
+		<div class="container">
+			<h2 align="center">Date And Time</h2>
+			<hr>
+			<h4>JavaScript Date Object</h4>
+			var d = new Date();<br>
+			Date object are based on a time value that is the number of milliseconds since 1 janauray 1970 UTC.<br>
+			By default, javascript will use the browser's time zone and display a date as a full text strings:<br><br>
+			getFullYear() - get the year as afour digit number (yyyy)<br>
+			getMonth() - get the month as a number (0-11)<br>
+			getDate() - get the day as a number (1-31)<br><br>
+			Example 1:<br>
+			<code>
+			var d = new Date();<br>
+			document.write(d);<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var d = new Date();
+				document.write(d);
+			</script>
+			<br><br>
+			Example 2:<br>
+			<code>
+			var d = new Date(1996,7,29);<br>
+			document.write(d);<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var d = new Date(1996,7,29);
+				document.write(d);
+			</script><br><br>
+			Example 3:<br>
+			<code>
+			var date_obj = new Date();<br>
+			var year = date_obj.getFullYear();<br>
+			var month = date_obj.getMonth() +1;<br>
+			var day = date_obj.getDate();<br>
+			document.write(year + "/" + month + "/" + day);<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var date_obj = new Date();
+				var year = date_obj.getFullYear();
+				var month = date_obj.getMonth() +1;
+				var day = date_obj.getDate();
+				document.write(year + "/" + month + "/" + day);
+			</script><br><br>
+			<h6>Universal Coordinated Time (UTC) is the time set by the world Time Standard</h6>
+			Example 4:<br>
+			<code>
+			var date_obj = new Date();<br>
+			var year = date_obj.getUTCFullYear();<br>
+			var month = date_obj.getUTCMonth() +1;<br>
+			var day = date_obj.getUTCDate();<br>
+			document.write(year + "/" + month + "/" + day);<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var date_obj = new Date();
+				var year = date_obj.getUTCFullYear();
+				var month = date_obj.getUTCMonth() +1;
+				var day = date_obj.getUTCDate();
+				document.write(year + "/" + month + "/" + day);
+			</script><br><br>
+			Example 5:<br>
+			<code>
+			var d = new Date();<br>
+			d.setDate(29);<br>
+			document.write(d);<br>
+			</code>
+			<kbd>Result</kbd>
+			<script type="text/javascript">
+				var d = new Date();
+				d.setDate(29);
+				document.write(d);
+			</script><br><br>
+			Example 6:<br>
+			<code>
+			var d = new Date();<br>
+			d.setMonth(7);<br>
+			document.write(d);<br>
+			</code>
+			<kbd>Result</kbd>
+			<script type="text/javascript">
+				var d = new Date();
+				d.setMonth(7);
+				document.write(d);
+			</script><br><br>
+			Example 7:<br>
+			<code>
+			var d = new Date();<br>
+			d.setFullYear(2016, 7, 29);<br>
+			document.write(d);<br>
+			</code>
+			<kbd>Result</kbd>
+			<script type="text/javascript">
+				var d = new Date();
+				d.setFullYear(2016, 7, 29);
+				document.write(d);
+			</script><br><br><hr>
+			<h4>For Time</h4>
+			var d = new Date();<br>
+			var n = d.getTime();<br>
+			Return the number of milliseconds since 1970/01/01<br><br>
+			The getHours() method returns the hour (from 0 to 23) of the specified date and time.<br>
+			var hour = d.getHours();<br><br>
+			The getMinutes() method returns the minutes (from 0 to 59) of the specified date and time.<br>
+			var minute = now.getMinutes();<br>
+			var second = now.getSeconds();<br><br>
+			Example 1:<br>
+			<code>
+			var d = new Date();<br>
+			var t = d.getTime();<br>
+			document.write(t);<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var d = new Date();
+				var t = d.getTime();
+				document.write(t);
+			</script>
+			<br><br>
+			Example 2:<br>
+			<code>
+			var d = new Date();<br>
+			var hour = d.getHours();<br>
+			document.write(hour);<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var d = new Date();
+				var hour = d.getHours();
+				document.write(hour);
+			</script>
+			<br><br>
+			Example 3:<br>
+			<code>
+			var d = new Date();<br>
+			var minute = d.getMinutes();<br>
+			document.write(minute);<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var d = new Date();
+				var minute = d.getMinutes();
+				document.write(minute);
+			</script>
+			<br><br>
+			Example 4:<br>
+			<code>
+			var d = new Date();<br>
+			var second = d.getSeconds();<br>
+			document.write(second);<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var d = new Date();
+				var second = d.getSeconds();
+				document.write(second);
+			</script>
+			<br><br>
+			Example 5:<br>
+			<code>
+			var d = new Date();<br>
+			var hour = d.getHours();<br>
+			var minute = d.getMinutes();<br>
+			var second = d.getSeconds();<br>
+			document.write(hour +":" + minute +":" + second);<br>
+			</code>
+			<kbd>Result:</kbd>
+			<script type="text/javascript">
+				var d = new Date();
+				var hour = d.getHours();
+				var minute = d.getMinutes();
+				var second = d.getSeconds();
+				document.write(hour + ":" + minute + ":" +second);
+			</script><br><hr><br>
+			<h4>SetInterval() and clearInterval() Method</h4>
+			<h5>setInterval()</h5>
+			The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).<br>
+			This method will continue calling the function until clearInterval() is called, or the window is closed.<br>
+			The ID value returned by setInterval() is used as the paramenter for the clearInterval() method.<br>
+			<h5>ClearInterval()</h5>
+			The clearInterval() method stops the executions of the function specified in the setInterval() method.<br>
+			Example:<br>
+			<code>
+			var clock = setInterval(clocktiming, 1000)<br>
+			function clocktiming(){<br>
+			var d = new Date();<br>
+			var time = d.toLocaleTimeString();<br>
+			document.getElementById('show_clock').innerHTML = time;<br>
+			</code>
+			<script type="text/javascript">
+				var clock = setInterval(clocktiming, 1000)
+				function clocktiming(){
+					var d = new Date();
+					var time = d.toLocaleTimeString();
+					document.getElementById('show_clock').innerHTML = time;
+				}
+			</script>
+			<kbd>Result:</kbd>
+			<h3 id="show_clock"></h3>&nbsp;&nbsp; To Stop Clock Just <button onclick="clearInterval(clock)">Click Here</button>
+			<br><hr><br>
+		</div>
+		
+	</body>
+</html>
