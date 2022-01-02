@@ -899,5 +899,68 @@
 				</script>
 			</ol>
 		</div><br><hr><br>
+		<div class="container">
+			<h3>Events in javascript</h3>
+		JavaScript's interaction with HTML is handled through events that occur when the user or the browser manipulates a page.<br>
+
+		Events are a part of the document object model (DOM) level 3 and every html element contains a set of events whicn can trigger javascript code.<br>
+
+		When the page loads, it is called an event. When the user clicks a button, that click too is an event, include events like pressing any key, closing a window, resizing a window etc.<br>
+
+		<ul>
+			<li>onclick</li>
+			Example:<br>
+			Click on the button then whole page color will change to facebook color.<br><button onclick="fbcolor()">Click here</button><br>
+			Click on the button then whole page color will change to twitter color.<br><button onclick="twrcolor()">Click here</button><br>
+			Click on the button then whole page color will change to whatsapp color.<br><button onclick="wacolor()">Click here</button><br>
+			Click on the button then whole page color will change to youtube color.<br><button onclick="ytcolor()">Click here</button>
+			<script type="text/javascript">
+				// function for facebook color
+				function fbcolor(){
+					document.body.style.backgroundColor = '#3b5999';
+					document.body.style.color = 'white';
+				}
+
+				// function for twitter color
+
+				function twrcolor(){
+					document.body.style.backgroundColor = "#00aced";
+					document.body.style.color = 'white';
+				}
+
+				// function for whatsapp color
+
+				function wacolor(){
+					document.body.style.backgroundColor = "#25d366";
+					document.body.style.color = 'white';
+				}
+
+				// function for youtube color
+
+				function ytcolor(){
+					document.body.style.backgroundColor = "#cd201f";
+					document.body.style.color = 'white';
+				}
+			</script>
+			<li>onmouseover</li>
+			Example:<br>
+			<button onmouseover="twrcolor()">Come here and hover mouse</button>
+			<li>onkeydown</li>
+			Example:<br>
+			<button onkeydown="ytcolor()">Come here key down</button>
+			<li>onkeyup</li>
+			Example:<br>
+			<button onkeyup="wacolor()">come here key up</button>
+			<li>onkeypress</li>
+			Example:<br>
+			<button onkeypress="fbcolor()">Come here press key</button>
+			<li>onmouseenter</li>
+			Example:<br>
+			<button onmouseenter= "twrcolor()">Come here enter mouse</button>
+			<li>onmouseout</li>
+			Example:<br>
+			<button onmouseout= "ytcolor()">come here and out from here</button>
+		</ul>
+		</div><br><hr><br>
 	</body>
 </html>
