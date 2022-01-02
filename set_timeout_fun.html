@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>SetTimeout function</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<h4>if you will not click on the stop button within 3 second then one alert message you will get</h4>
+			<button onclick="clearInterval(d)" class="btn-danger btn-outline-success w-50 btn-block text-white">Stop</button>
+			<script type="text/javascript">
+				var d = setTimeout(show_alert, 3000);
+				function show_alert(){
+					alert("Why you did not click on the stop button now your time is off")
+				}
+			</script>
+		</div>
+	</body>
+</html>
