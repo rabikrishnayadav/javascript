@@ -21,13 +21,37 @@
 				function radiovalidation(){
 					var a = document.radio_form.radiobtn;
 					for (i=0; i<a.length; i++)
-							{
-								if (a[i].checked==true)
-								return true;
-							}
-						document.getElementById('message').innerHTML="** Please Select Anyone";
-						return false;
-					}
+								{
+									if (a[i].checked==true)
+									return true;
+								}
+							document.getElementById('message').innerHTML="** Please Select Anyone";
+							return false;
+						}
+					</script>
+				</div><br><hr><br>
+				<div><h2>Check Box</h2>
+					<form name="checkbox_form" onsubmit="return checkboxvalidation()">
+						Gender:&nbsp;&nbsp;
+						<input type="checkbox" name="checkbox" value="HTML"> HTML</input>&nbsp;&nbsp;
+						<input type="checkbox" name="checkbox" value="CSS"> CSS</input>&nbsp;&nbsp;
+						<input type="checkbox" name="checkbox" value="HTML 5"> HTML 5</input>&nbsp;&nbsp;
+						<input type="checkbox" name="checkbox" value="CSS 3"> CSS 3</input>&nbsp;&nbsp;
+						<input type="checkbox" name="checkbox" value="JS"> JavaScript</input>&nbsp;&nbsp;
+						<p id="checkbox_message" style="color: red; font-size:20px"></p>
+						<input type="submit" name="submit" value="Submit"><br><br>
+					</form>
+					<script type="text/javascript">
+					function checkboxvalidation(){
+						var b = document.checkbox_form.checkbox;
+						for (i=0; i<b.length; i++)
+								{
+									if (b[i].checked==true)
+									return true;
+								}
+							document.getElementById('checkbox_message').innerHTML="** Please Select Atleast One";
+							return false;
+						}
 					</script>
 				</div>
 			</div>
