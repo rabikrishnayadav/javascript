@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Form Validation</title>
+		<title>Form validation Regex</title>
 		<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	</head>
 	<body>
 		<div class="container">
-			<h1 class="text-center text-success">Complete Form Validation Using DOM</h1><br><br>
+			<h1 class="text-center text-success">Complete Form Validation Using Regex(Regular Expression)</h1><br><br>
 			<div class="col-lg-8 m-auto d-block">
 				<form class="bg-light" action="#" onsubmit="return validation()"><br>
 					<div class="form-group">
@@ -19,7 +19,7 @@
 					<div class="form-group">
 						<label>Password:</label>
 						<input type="text" name="user_password" id="userpassword" class="form-control" autocomplete="off">
-						<span id="userpassworid" class="text-danger font-weight-bold"></span>
+						<span id="userpasswordid" class="text-danger font-weight-bold"></span>
 					</div>
 					<div class="form-group">
 						<label>Confirm Password:</label>
@@ -50,58 +50,41 @@
 				var user_confirm_password = document.getElementById('userconfirmpassword').value;
 				var user_mobile = document.getElementById('usermobile').value;
 				var user_email = document.getElementById('useremail').value;
-				if (user_name =="") {
-					document.getElementById('usernameid').innerHTML = "** fill the user name **";
+				var user_name_check = /^[A-Za-z.]{3,30}$/;
+				var user_password_check = /^(?=.*[0-9])(?=.*[!@#$%^&])[a-zA-Z0-9!@#$%^&*]{4,8}$/;
+				var user_email_check = /^[A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+				var user_mobile_check = /^[789][0-9]{9}$/;
+				if (user_name_check.test(user_name)) {
+					document.getElementById('usernameid').innerHTML = " ";
+				}else {
+					document.getElementById('usernameid').innerHTML = "** Username is Invalid **";
 					return false;
 				}
-				if ((user_name.length < 4) || (user_name.length > 8)) {
-					document.getElementById('usernameid').innerHTML = "** user name length must be between 4 to 8 **";
+				if (user_password_check.test(user_password)) {
+					document.getElementById('userpasswordid').innerHTML = " ";
+				}else {
+					document.getElementById('userpasswordid').innerHTML = "** Password is Invalid **";
+					return false;
+						}
+				if (user_confirm_password.match(user_password)) {
+					document.getElementById('userconfirmpasswordid').innerHTML = " ";
+				}else {
+					document.getElementById('userconfirmpasswordid').innerHTML ="** password is not matching **";
 					return false;
 				}
-				if (!isNaN(user_name)) {
-					document.getElementById('usernameid').innerHTML = "** fill the user name in character **";
+				if (user_mobile_check.test(user_mobile)) {
+					document.getElementById('usermobileid').innerHTML =" ";
+				}else {
+					document.getElementById('usermobileid').innerHTML ="** mobile number is invalid **";
 					return false;
 				}
-				if (user_password =="") {
-					document.getElementById('userpassworid').innerHTML = "** fill the password **";
+				if (user_email_check.test(user_email)) {
+					document.getElementById('useremailid').innerHTML =" ";
+				}else {
+					document.getElementById('useremailid').innerHTML ="** email is invalid **";
 					return false;
 				}
-				if ((user_password.length < 4) || (user_password.length > 8)) {
-					document.getElementById('userpassworid').innerHTML = "** password length must be between 4 to 8 **";
-					return false;
-				}
-				if (user_confirm_password =="") {
-					document.getElementById('userconfirmpasswordid').innerHTML = "** fill the confirm password **";
-					return false;
-				}
-				if (user_password != user_confirm_password) {
-					document.getElementById('userconfirmpasswordid').innerHTML = "** password is not maching **";
-					return false;
-				}
-				if (user_mobile =="") {
-					document.getElementById('usermobileid').innerHTML = "** fill the mobile number **";
-					return false;
-				}
-				if (user_mobile.length != 10) {
-					document.getElementById('usermobileid').innerHTML = "** mobile number must should be 10 digit **";
-					return false;
-				}
-				if (isNaN(user_mobile)) {
-					document.getElementById('usermobileid').innerHTML = "** mobile number should contain only digit **";
-					return false;
-				}
-				if (user_email =="") {
-					document.getElementById('useremailid').innerHTML = "** fill the email id **";
-					return false;
-				}
-				if (user_email.indexOf('@') <=0) {
-					document.getElementById('useremailid').innerHTML = "** fill the correct email id **";
-					return false;
-				}
-				if ((user_email.charAt(user_email.length-4)!='.') && (user_email.charAt(user_email.length-3)!='.')) {
-					document.getElementById('useremailid').innerHTML = "** fill the correct email id **";
-					return false;
-				}
+				
 			}
 		</script>
 	</body>
