@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Validation</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1 align="center" class="text-success">Validation in JavaScript</h1>
+			<div><h2>Radio Button</h2>
+				<form name="radio_form" onsubmit="return radiovalidation()">
+					Gender:&nbsp;&nbsp;
+					<input type="radio" name="radiobtn" value="male">Male</input>&nbsp;&nbsp;
+					<input type="radio" name="radiobtn" value="female">Female</input>&nbsp;&nbsp;
+					<p id="message" style="color: red; font-size:20px"></p>
+					<input type="submit" name="submit" value="Submit"><br><br>
+				</form>
+				<script type="text/javascript">
+				function radiovalidation(){
+					var a = document.radio_form.radiobtn;
+					for (i=0; i<a.length; i++)
+							{
+								if (a[i].checked==true)
+								return true;
+							}
+						document.getElementById('message').innerHTML="** Please Select Anyone";
+						return false;
+					}
+					</script>
+				</div>
+			</div>
+		</body>
+	</html>
