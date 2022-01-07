@@ -21,16 +21,16 @@
 				function radiovalidation(){
 					var a = document.radio_form.radiobtn;
 					for (i=0; i<a.length; i++)
-								{
-									if (a[i].checked==true)
-									return true;
-								}
-							document.getElementById('message').innerHTML="** Please Select Anyone";
-							return false;
-						}
-					</script>
-				</div><br><hr><br>
-				<div><h2>Check Box</h2>
+					{
+						if (a[i].checked==true)
+						return true;
+					}
+					document.getElementById('message').innerHTML="** Please Select Anyone";
+					return false;
+				}
+				</script>
+			</div><br><hr><br>
+			<div><h2>Check Box</h2>
 					<form name="checkbox_form" onsubmit="return checkboxvalidation()">
 						Gender:&nbsp;&nbsp;
 						<input type="checkbox" name="checkbox" value="HTML"> HTML</input>&nbsp;&nbsp;
@@ -53,7 +53,54 @@
 							return false;
 						}
 					</script>
-				</div>
-			</div>
-		</body>
-	</html>
+			</div><br><hr><br>
+			<div><h2>Dependent Select Option</h2>
+					<div class="row">
+						<div class="col-lg-6 offset-lg-3">
+							<form>
+								<div class="form-content">
+									<div class="input-group mb-3" style="width:600px;">
+										<div class="input-group-prepend">
+											<span class="input-group-text">Country</span>
+										</div>
+										<select class="form-control" name="slct1" id="slctid1"  aria-describedby="basic-addon1" data-toggle="tooltip" title="Please Select country" onchange="populate(this.id,'slctid2')">
+											<option value=""> -- Select Here -- </option>
+											<option value="nepal">Nepal</option>
+											<option value="india">India</option>
+										</select>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<div class="input-group-prepend">
+											<span class="input-group-text">City</span>
+										</div>
+										<select class="form-control" name="slct2" id="slctid2"  aria-describedby="basic-addon1">
+											<option value=""> -- Select Here -- </option>
+										</select>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<script type="text/javascript">
+					
+					function populate(s1,s2){
+						var s1 = document.getElementById(s1);
+						var s2 = document.getElementById(s2);
+						s2.innerHTML = "";
+						if (s1.value == 'nepal') {
+							var cityArray = ['ktm|Kathmandu','jnk|Jankapur'];
+						} else if (s1.value == 'india') {
+							var cityArray = ['dl|Delhi','ka|Banglore','br|Patna','mh|Mumbai'];
+						}
+						for (var option in cityArray) {
+							var pair = cityArray[option].split('|');
+							var newoption = document.createElement('option');
+							newoption.value = pair[0];
+							newoption.innerHTML = pair[1];
+							s2.options.add(newoption);
+						}
+					}
+					</script>
+			</div><br><hr><br>			
+		</div>
+	</body>
+</html>
